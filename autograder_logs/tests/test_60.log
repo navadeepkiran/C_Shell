@@ -1,0 +1,708 @@
+{
+    "testcase": {
+        "section": "B.3",
+        "description": "Tests the 15-command history limit and ensures sequential duplicate commands are not logged.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "cmd": "hop 1",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 2",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 3",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 4",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 5",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 6",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 7",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 8",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 9",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 10",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 11",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 12",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 13",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 14",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 15",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 15",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 16",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop 17",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "log",
+                "sequential_outputs": [
+                    {
+                        "text": "hop 3",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 4",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 5",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 6",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 7",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 8",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 9",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 10",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 11",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 12",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 13",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 14",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 15",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 16",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "hop 17",
+                        "is_re": false,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-19T22:39:42.380631+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-19T22:39:42.380912+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.381002+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.381103+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 1', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.432893+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.433334+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.433432+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.433530+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 2', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.484801+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.485072+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.485153+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.485229+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 3', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.548105+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.548369+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.548473+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.548547+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 4', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.599615+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.599819+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.599881+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.599956+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 5', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.672083+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.672353+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.672470+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.672547+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 6', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.723580+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.723829+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.723930+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.724028+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 7', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.797474+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.797811+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.797959+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.798086+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 8', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.849223+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.849430+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.849544+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.849635+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 9', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.900776+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.900966+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.901051+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.901122+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 10', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:42.952159+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:42.952419+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:42.952532+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:42.952623+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 11', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.003639+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.003889+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.003964+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.004033+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 12', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.054981+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.055213+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.055282+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.055358+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 13', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.106272+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.106514+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.106583+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.106654+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 14', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.157608+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.157855+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.157927+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.157995+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 15', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.209031+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.209282+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.209356+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.209423+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 15', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.260320+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.260614+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.260732+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.260814+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 16', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.312524+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.312782+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.312858+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.312925+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop 17', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.364375+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-19T22:39:43.364708+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.364801+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:43.364966+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='log', sequential_outputs=[Line(text='hop 3', is_re=False, negative_match=False), Line(text='hop 4', is_re=False, negative_match=False), Line(text='hop 5', is_re=False, negative_match=False), Line(text='hop 6', is_re=False, negative_match=False), Line(text='hop 7', is_re=False, negative_match=False), Line(text='hop 8', is_re=False, negative_match=False), Line(text='hop 9', is_re=False, negative_match=False), Line(text='hop 10', is_re=False, negative_match=False), Line(text='hop 11', is_re=False, negative_match=False), Line(text='hop 12', is_re=False, negative_match=False), Line(text='hop 13', is_re=False, negative_match=False), Line(text='hop 14', is_re=False, negative_match=False), Line(text='hop 15', is_re=False, negative_match=False), Line(text='hop 16', is_re=False, negative_match=False), Line(text='hop 17', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416315+05:30",
+            "type": "output",
+            "details": "hop 3"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416584+05:30",
+            "type": "output",
+            "details": "hop 4"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416656+05:30",
+            "type": "output",
+            "details": "hop 5"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416713+05:30",
+            "type": "output",
+            "details": "hop 6"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416762+05:30",
+            "type": "output",
+            "details": "hop 7"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416805+05:30",
+            "type": "output",
+            "details": "hop 8"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416847+05:30",
+            "type": "output",
+            "details": "hop 9"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416892+05:30",
+            "type": "output",
+            "details": "hop 10"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416943+05:30",
+            "type": "output",
+            "details": "hop 11"
+        },
+        {
+            "time": "2025-11-19T22:39:43.416986+05:30",
+            "type": "output",
+            "details": "hop 12"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417030+05:30",
+            "type": "output",
+            "details": "hop 13"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417072+05:30",
+            "type": "output",
+            "details": "hop 14"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417119+05:30",
+            "type": "output",
+            "details": "hop 15"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417164+05:30",
+            "type": "output",
+            "details": "hop 16"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417206+05:30",
+            "type": "output",
+            "details": "hop 17"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417247+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:43.417294+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 1\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 2\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 3\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 4\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 5\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 6\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 7\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 8\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 9\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 10\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 11\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 12\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 13\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 14\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 15\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 15\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 16\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop 17\nNo such directory!\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> log\nhop 3\r\nhop 4\r\nhop 5\r\nhop 6\r\nhop 7\r\nhop 8\r\nhop 9\r\nhop 10\r\nhop 11\r\nhop 12\r\nhop 13\r\nhop 14\r\nhop 15\r\nhop 16\r\nhop 17\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> ",
+    "py_log": "2025-11-19 22:39:41,533 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x78f01703c710>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_8e97b8d55f52406f9df8751574804e2d', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpyus_nuyl:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 3811944\n    child_fd: 135\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017193580>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:39:42,380 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.380631+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-19 22:39:42,380 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.380912+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,381 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.381002+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,381 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.381103+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 1', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,433 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.432893+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,433 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.433334+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,433 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.433432+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,433 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.433530+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 2', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,484 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.484801+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,485 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.485072+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,485 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.485153+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,485 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.485229+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 3', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,548 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.548105+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,548 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.548369+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,548 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.548473+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,548 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.548547+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 4', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,599 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.599615+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,599 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.599819+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,599 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.599881+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,599 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.599956+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 5', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,672 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.672083+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,672 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.672353+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,672 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.672470+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,672 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.672547+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 6', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,723 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.723580+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,723 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.723829+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,723 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.723930+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,724 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.724028+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 7', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,797 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.797474+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,797 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.797811+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,797 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.797959+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,798 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.798086+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 8', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,849 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.849223+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,849 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.849430+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,849 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.849544+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,849 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.849635+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 9', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,900 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.900776+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,900 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.900966+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,901 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.901051+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,901 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.901122+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 10', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:42,952 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.952159+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:42,952 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.952419+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:42,952 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.952532+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:42,952 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:42.952623+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 11', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,003 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.003639+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,003 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.003889+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,003 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.003964+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,004 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.004033+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 12', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,055 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.054981+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,055 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.055213+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,055 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.055282+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,055 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.055358+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 13', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,106 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.106272+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,106 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.106514+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,106 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.106583+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,106 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.106654+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 14', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,157 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.157608+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,157 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.157855+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,157 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.157927+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,158 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.157995+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 15', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,209 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.209031+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,209 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.209282+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,209 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.209356+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,209 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.209423+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 15', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,260 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.260320+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,260 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.260614+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,260 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.260732+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,260 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.260814+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 16', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,312 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.312524+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,312 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.312782+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,312 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.312858+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,312 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.312925+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop 17', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,364 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.364375+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-19 22:39:43,364 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.364708+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,364 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.364801+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,364 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.364966+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='log', sequential_outputs=[Line(text='hop 3', is_re=False, negative_match=False), Line(text='hop 4', is_re=False, negative_match=False), Line(text='hop 5', is_re=False, negative_match=False), Line(text='hop 6', is_re=False, negative_match=False), Line(text='hop 7', is_re=False, negative_match=False), Line(text='hop 8', is_re=False, negative_match=False), Line(text='hop 9', is_re=False, negative_match=False), Line(text='hop 10', is_re=False, negative_match=False), Line(text='hop 11', is_re=False, negative_match=False), Line(text='hop 12', is_re=False, negative_match=False), Line(text='hop 13', is_re=False, negative_match=False), Line(text='hop 14', is_re=False, negative_match=False), Line(text='hop 15', is_re=False, negative_match=False), Line(text='hop 16', is_re=False, negative_match=False), Line(text='hop 17', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416315+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 3\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416584+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 4\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416656+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 5\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416713+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 6\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416762+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 7\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416805+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 8\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416847+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 9\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416892+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 10\"\n    }\n2025-11-19 22:39:43,416 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416943+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 11\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.416986+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 12\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417030+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 13\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417072+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 14\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417119+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 15\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417164+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 16\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417206+05:30\",\n        \"type\": \"output\",\n        \"details\": \"hop 17\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417247+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:43,417 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:43.417294+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:43,820 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x78f01703c710>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_8e97b8d55f52406f9df8751574804e2d', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpyus_nuyl:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<(null)@osntesting:~> '\n    match: <re.Match object; span=(0, 22), match='<(null)@osntesting:~> '>\n    match_index: 0\n    exitstatus: 129\n    flag_eof: False\n    pid: 3811944\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017193580>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:39:43,820 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Cleaned up temp_dir: /tmp/tmpyus_nuyl\n"
+}

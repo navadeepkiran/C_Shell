@@ -1,0 +1,74 @@
+{
+    "testcase": {
+        "section": "C.4",
+        "description": "Tests that stderr from a piped command is not redirected to the next command.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "cmd": "ls /nonexistent | wc -c",
+                "sequential_outputs": [
+                    {
+                        "text": "ls: cannot access .*'/nonexistent'.*: No such file or directory",
+                        "is_re": true,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "\\\\s*0\\\\s*",
+                        "is_re": true,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-19T22:40:26.604880+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-19T22:40:26.605067+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:26.605145+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:40:26.605228+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='ls /nonexistent | wc -c', sequential_outputs=[Line(text=\"ls: cannot access .*'/nonexistent'.*: No such file or directory\", is_re=True, negative_match=False), Line(text='\\\\\\\\s*0\\\\\\\\s*', is_re=True, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:40:26.658462+05:30",
+            "type": "output",
+            "details": "ls: cannot access '/nonexistent': No such file or directory"
+        },
+        {
+            "time": "2025-11-19T22:40:26.658632+05:30",
+            "type": "output",
+            "details": "0"
+        },
+        {
+            "time": "2025-11-19T22:40:26.658884+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:26.658955+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> ls /nonexistent | wc -c\nls: cannot access '/nonexistent': No such file or directory\r\n0\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> ",
+    "py_log": "2025-11-19 22:40:25,883 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x78f014eb2d20>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_e2525e8245c8462d9fe12089449d9ec7', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpqmw2rk2h:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 3959862\n    child_fd: 123\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f014e2af80>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:40:26,604 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.604880+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-19 22:40:26,605 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.605067+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:26,605 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.605145+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:26,605 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.605228+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='ls /nonexistent | wc -c', sequential_outputs=[Line(text=\\\"ls: cannot access .*'/nonexistent'.*: No such file or directory\\\", is_re=True, negative_match=False), Line(text='\\\\\\\\\\\\\\\\s*0\\\\\\\\\\\\\\\\s*', is_re=True, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:40:26,658 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.658462+05:30\",\n        \"type\": \"output\",\n        \"details\": \"ls: cannot access '/nonexistent': No such file or directory\"\n    }\n2025-11-19 22:40:26,658 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.658632+05:30\",\n        \"type\": \"output\",\n        \"details\": \"0\"\n    }\n2025-11-19 22:40:26,658 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.658884+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:26,658 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:26.658955+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:27,178 - tester.a8e1da55-994d-408e-b202-91b02396c39d - WARNING - Failed to remove container tester_e2525e8245c8462d9fe12089449d9ec7: 409 Client Error for http+docker://localhost/v1.51/containers/3ec0290db2b57d0585c401f6c79e7e857c5fb5d9fb4933c7a03dec0f4ef153e1?v=False&link=False&force=True: Conflict (\"removal of container 3ec0290db2b57d0585c401f6c79e7e857c5fb5d9fb4933c7a03dec0f4ef153e1 is already in progress\")\n2025-11-19 22:40:27,178 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x78f014eb2d20>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_e2525e8245c8462d9fe12089449d9ec7', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpqmw2rk2h:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<(null)@osntesting:~> '\n    match: <re.Match object; span=(0, 22), match='<(null)@osntesting:~> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 3959862\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f014e2af80>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:40:27,179 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Cleaned up temp_dir: /tmp/tmpqmw2rk2h\n"
+}

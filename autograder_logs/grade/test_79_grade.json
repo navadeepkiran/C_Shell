@@ -1,0 +1,14 @@
+{
+    "test_id": "test_79",
+    "section": "C.3",
+    "description": "Tests that '>>' appends to a file rather than overwriting it.",
+    "passed": false,
+    "failure": {
+        "step_index": 2,
+        "command": "cat test/file4.txt",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 2,
+        "actual": 3
+    },
+    "score": 0.0
+}

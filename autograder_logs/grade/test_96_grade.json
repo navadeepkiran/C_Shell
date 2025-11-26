@@ -1,0 +1,14 @@
+{
+    "test_id": "test_96",
+    "section": "D.1",
+    "description": "Tests basic sequential execution with two simple commands.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "ls -1 test ; pwd",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 6,
+        "actual": 7
+    },
+    "score": 0.0
+}

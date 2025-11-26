@@ -1,0 +1,14 @@
+{
+    "test_id": "test_78",
+    "section": "C.3",
+    "description": "Tests basic output redirection. Creates a file and verifies its content.",
+    "passed": false,
+    "failure": {
+        "step_index": 1,
+        "command": "cat output_file.txt",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

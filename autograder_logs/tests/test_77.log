@@ -1,0 +1,64 @@
+{
+    "testcase": {
+        "section": "C.2",
+        "description": "Tests that redirecting input from a directory results in an error.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "cmd": "cat < test/folder1",
+                "sequential_outputs": [
+                    {
+                        "text": ".*Is a directory.*",
+                        "is_re": true,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": true
+    },
+    "events": [
+        {
+            "time": "2025-11-19T22:40:08.196328+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-19T22:40:08.197071+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:08.197494+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:40:08.197975+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='cat < test/folder1', sequential_outputs=[Line(text='.*Is a directory.*', is_re=True, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:40:08.251734+05:30",
+            "type": "output",
+            "details": "cat: -: Is a directory"
+        },
+        {
+            "time": "2025-11-19T22:40:08.252114+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:08.252207+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> cat < test/folder1\ncat: -: Is a directory\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> ",
+    "py_log": "2025-11-19 22:40:07,427 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x78f01703c950>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_7ba3556dafb54d88960362c15d6e4bd0', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmprsrqphxu:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 3896294\n    child_fd: 143\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017191c00>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:40:08,196 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.196328+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-19 22:40:08,197 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.197071+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:08,197 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.197494+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:08,198 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.197975+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='cat < test/folder1', sequential_outputs=[Line(text='.*Is a directory.*', is_re=True, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:40:08,251 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.251734+05:30\",\n        \"type\": \"output\",\n        \"details\": \"cat: -: Is a directory\"\n    }\n2025-11-19 22:40:08,252 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.252114+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:08,252 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:08.252207+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:08,656 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x78f01703c950>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_7ba3556dafb54d88960362c15d6e4bd0', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmprsrqphxu:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<(null)@osntesting:~> '\n    match: <re.Match object; span=(0, 22), match='<(null)@osntesting:~> '>\n    match_index: 0\n    exitstatus: 129\n    flag_eof: False\n    pid: 3896294\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017191c00>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:40:08,656 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Cleaned up temp_dir: /tmp/tmprsrqphxu\n"
+}

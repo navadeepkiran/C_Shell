@@ -1,0 +1,14 @@
+{
+    "test_id": "test_87",
+    "section": "C.4",
+    "description": "Tests a simple pipe to filter the output of ls.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "ls test | grep folder",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 3,
+        "actual": 4
+    },
+    "score": 0.0
+}

@@ -1,0 +1,14 @@
+{
+    "test_id": "test_42",
+    "section": "B.1",
+    "description": "Tests that 'hop' with no arguments and 'hop ~' both change the CWD to the home directory.",
+    "passed": false,
+    "failure": {
+        "step_index": 2,
+        "command": "pwd",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

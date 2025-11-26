@@ -1,0 +1,14 @@
+{
+    "test_id": "test_71",
+    "section": "C.2",
+    "description": "Tests basic input redirection. The content of file4.txt should be printed.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "cat < test/file4.txt",
+        "reason": "Mismatch at sequential line 3",
+        "expected": "This is line 4.",
+        "actual": "This is line 4.get login failed: No such device or address"
+    },
+    "score": 0.0
+}

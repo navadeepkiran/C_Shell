@@ -1,0 +1,14 @@
+{
+    "test_id": "test_49",
+    "section": "B.2",
+    "description": "Tests that reveal prints a syntax error when more than one path argument is provided.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "reveal folder1 folder2",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

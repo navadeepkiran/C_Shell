@@ -1,0 +1,14 @@
+{
+    "test_id": "test_103",
+    "section": "D.2",
+    "description": "Tests a sequential command followed by a background command, ensuring the first part waits and the second does not.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "echo sequential part ; sleep 1 &",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

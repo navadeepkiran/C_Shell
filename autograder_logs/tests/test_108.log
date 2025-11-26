@@ -1,0 +1,119 @@
+{
+    "testcase": {
+        "section": "D.2",
+        "description": "Tests that a background process is correctly detached from terminal input, causing it to receive an immediate EOF.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "cmd": "wc -l &",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [
+                    {
+                        "text": "\\\\[1\\\\] \\\\d+",
+                        "is_re": true,
+                        "negative_match": false
+                    }
+                ],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "echo foreground",
+                "sequential_outputs": [
+                    {
+                        "text": "foreground",
+                        "is_re": false,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [
+                    {
+                        "text": "^ *0 *",
+                        "is_re": true,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "wc with pid \\\\d+ exited normally",
+                        "is_re": true,
+                        "negative_match": false
+                    }
+                ],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-19T22:40:52.452832+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-19T22:40:52.453137+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:52.453225+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:40:52.453323+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='wc -l &', sequential_outputs=[], nonsequential_outputs=[Line(text='\\\\\\\\[1\\\\\\\\] \\\\\\\\d+', is_re=True, negative_match=False)], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:40:52.506269+05:30",
+            "type": "output",
+            "details": "[1] 28"
+        },
+        {
+            "time": "2025-11-19T22:40:52.506535+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:52.506626+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:40:52.506717+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='echo foreground', sequential_outputs=[Line(text='foreground', is_re=False, negative_match=False)], nonsequential_outputs=[Line(text='^ *0 *', is_re=True, negative_match=False), Line(text='wc with pid \\\\\\\\d+ exited normally', is_re=True, negative_match=False)], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:40:52.557149+05:30",
+            "type": "output",
+            "details": "0"
+        },
+        {
+            "time": "2025-11-19T22:40:52.562788+05:30",
+            "type": "output",
+            "details": "foreground"
+        },
+        {
+            "time": "2025-11-19T22:40:52.562973+05:30",
+            "type": "output",
+            "details": "wc -l with pid 28 exited normally"
+        },
+        {
+            "time": "2025-11-19T22:40:52.563052+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:40:52.563114+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> wc -l &\n[1] 28\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> echo foreground\n0\r\nforeground\r\nwc -l with pid 28 exited normally\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> ",
+    "py_log": "2025-11-19 22:40:51,213 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x78f014eaa0f0>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_842f432a8d504be0a5db5e51e7dccf23', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp3v14oxyw:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 4038496\n    child_fd: 133\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f014e28280>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:40:52,452 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.452832+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-19 22:40:52,453 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.453137+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:52,453 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.453225+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:52,453 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.453323+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='wc -l &', sequential_outputs=[], nonsequential_outputs=[Line(text='\\\\\\\\\\\\\\\\[1\\\\\\\\\\\\\\\\] \\\\\\\\\\\\\\\\d+', is_re=True, negative_match=False)], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:40:52,506 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.506269+05:30\",\n        \"type\": \"output\",\n        \"details\": \"[1] 28\"\n    }\n2025-11-19 22:40:52,506 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.506535+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:52,506 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.506626+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:52,506 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.506717+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='echo foreground', sequential_outputs=[Line(text='foreground', is_re=False, negative_match=False)], nonsequential_outputs=[Line(text='^ *0 *', is_re=True, negative_match=False), Line(text='wc with pid \\\\\\\\\\\\\\\\d+ exited normally', is_re=True, negative_match=False)], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:40:52,557 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.557149+05:30\",\n        \"type\": \"output\",\n        \"details\": \"0\"\n    }\n2025-11-19 22:40:52,562 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.562788+05:30\",\n        \"type\": \"output\",\n        \"details\": \"foreground\"\n    }\n2025-11-19 22:40:52,562 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.562973+05:30\",\n        \"type\": \"output\",\n        \"details\": \"wc -l with pid 28 exited normally\"\n    }\n2025-11-19 22:40:52,563 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.563052+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:40:52,563 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:40:52.563114+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:40:53,115 - tester.a8e1da55-994d-408e-b202-91b02396c39d - WARNING - Failed to remove container tester_842f432a8d504be0a5db5e51e7dccf23: 409 Client Error for http+docker://localhost/v1.51/containers/a0a65ce5bb30d4791d4a24a62917eb74a0d39ea4b1bccd65b769031c09cc816a?v=False&link=False&force=True: Conflict (\"removal of container a0a65ce5bb30d4791d4a24a62917eb74a0d39ea4b1bccd65b769031c09cc816a is already in progress\")\n2025-11-19 22:40:53,116 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x78f014eaa0f0>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_842f432a8d504be0a5db5e51e7dccf23', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp3v14oxyw:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<(null)@osntesting:~> '\n    match: <re.Match object; span=(0, 22), match='<(null)@osntesting:~> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 4038496\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f014e28280>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:40:53,116 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Cleaned up temp_dir: /tmp/tmp3v14oxyw\n"
+}

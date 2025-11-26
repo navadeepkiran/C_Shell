@@ -1,0 +1,14 @@
+{
+    "test_id": "test_60",
+    "section": "B.3",
+    "description": "Tests the 15-command history limit and ensures sequential duplicate commands are not logged.",
+    "passed": false,
+    "failure": {
+        "step_index": 18,
+        "command": "log",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 15,
+        "actual": 16
+    },
+    "score": 0.0
+}

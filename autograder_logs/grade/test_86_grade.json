@@ -1,0 +1,14 @@
+{
+    "test_id": "test_86",
+    "section": "C.3",
+    "description": "Tests combined input and append-output redirection to the same file.",
+    "passed": false,
+    "failure": {
+        "step_index": 2,
+        "command": "cat same_file.txt",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

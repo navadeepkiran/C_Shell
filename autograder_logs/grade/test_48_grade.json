@@ -1,0 +1,14 @@
+{
+    "test_id": "test_48",
+    "section": "B.2",
+    "description": "Tests 'reveal -al' to ensure it lists all files and directories, including hidden ones, in a line-by-line and lexicographically sorted format.",
+    "passed": false,
+    "failure": {
+        "step_index": 3,
+        "command": "reveal -al",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 9,
+        "actual": 10
+    },
+    "score": 0.0
+}

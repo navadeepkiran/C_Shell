@@ -1,0 +1,14 @@
+{
+    "test_id": "test_85",
+    "section": "C.3",
+    "description": "Tests that redirecting output to a directory results in an error.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "echo hello > test/folder1",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

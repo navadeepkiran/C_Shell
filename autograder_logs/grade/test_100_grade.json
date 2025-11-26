@@ -1,0 +1,14 @@
+{
+    "test_id": "test_100",
+    "section": "D.1",
+    "description": "Tests a long sequence of simple commands to ensure they are all executed in the correct order.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "echo 1 ; echo 2 ; echo 3 ; echo 4 ; echo 5",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 5,
+        "actual": 6
+    },
+    "score": 0.0
+}

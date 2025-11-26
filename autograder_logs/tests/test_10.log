@@ -1,0 +1,79 @@
+{
+    "testcase": {
+        "section": "A.3",
+        "description": "Tests valid syntax with multiple background operators.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "cmd": "a & b & c &",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [
+                    {
+                        "text": "Invalid Syntax!",
+                        "is_re": false,
+                        "negative_match": true
+                    }
+                ],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-19T22:38:30.306844+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-19T22:38:30.307221+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:38:30.307379+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:38:30.307597+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='a & b & c &', sequential_outputs=[], nonsequential_outputs=[Line(text='Invalid Syntax!', is_re=False, negative_match=True)], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:38:30.360533+05:30",
+            "type": "output",
+            "details": "[1] 28"
+        },
+        {
+            "time": "2025-11-19T22:38:30.360806+05:30",
+            "type": "output",
+            "details": "[2] 29"
+        },
+        {
+            "time": "2025-11-19T22:38:30.361084+05:30",
+            "type": "output",
+            "details": "Command not found!"
+        },
+        {
+            "time": "2025-11-19T22:38:30.361186+05:30",
+            "type": "output",
+            "details": "[3] 30"
+        },
+        {
+            "time": "2025-11-19T22:38:30.361255+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:38:30.361318+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> a & b & c &\n[1] 28\r\n[2] 29\r\nCommand not found!\r\n[3] 30\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> Command not found!\r\nCommand not found!\r\n",
+    "py_log": "2025-11-19 22:38:29,269 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x78f01703cbc0>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_2cbcffaf3fbd4b80ad6dc920b0bff5b9', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp57j6y2rx:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 3585475\n    child_fd: 121\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017193340>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:38:30,306 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.306844+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-19 22:38:30,307 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.307221+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:38:30,307 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.307379+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:38:30,307 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.307597+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='a & b & c &', sequential_outputs=[], nonsequential_outputs=[Line(text='Invalid Syntax!', is_re=False, negative_match=True)], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:38:30,360 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.360533+05:30\",\n        \"type\": \"output\",\n        \"details\": \"[1] 28\"\n    }\n2025-11-19 22:38:30,360 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.360806+05:30\",\n        \"type\": \"output\",\n        \"details\": \"[2] 29\"\n    }\n2025-11-19 22:38:30,361 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.361084+05:30\",\n        \"type\": \"output\",\n        \"details\": \"Command not found!\"\n    }\n2025-11-19 22:38:30,361 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.361186+05:30\",\n        \"type\": \"output\",\n        \"details\": \"[3] 30\"\n    }\n2025-11-19 22:38:30,361 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.361255+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:38:30,361 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:38:30.361318+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:38:30,943 - tester.a8e1da55-994d-408e-b202-91b02396c39d - WARNING - Failed to remove container tester_2cbcffaf3fbd4b80ad6dc920b0bff5b9: 409 Client Error for http+docker://localhost/v1.51/containers/221eae3fcfefe02ed5adc8719b02ca06a6e98617ed3d6fa604f3f98e165a8308?v=False&link=False&force=True: Conflict (\"removal of container 221eae3fcfefe02ed5adc8719b02ca06a6e98617ed3d6fa604f3f98e165a8308 is already in progress\")\n2025-11-19 22:38:30,943 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x78f01703cbc0>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_2cbcffaf3fbd4b80ad6dc920b0bff5b9', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp57j6y2rx:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): 'Command not found!\\r\\nCommand not found!\\r\\n'\n    before (last 100 chars): ''\n    after: '<(null)@osntesting:~> '\n    match: <re.Match object; span=(0, 22), match='<(null)@osntesting:~> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 3585475\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017193340>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:38:30,943 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Cleaned up temp_dir: /tmp/tmp57j6y2rx\n"
+}

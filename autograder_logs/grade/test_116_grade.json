@@ -1,0 +1,14 @@
+{
+    "test_id": "test_116",
+    "section": "E.2",
+    "description": "Tests ping command with missing arguments.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "ping",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

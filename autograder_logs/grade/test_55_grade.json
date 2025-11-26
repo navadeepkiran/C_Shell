@@ -1,0 +1,14 @@
+{
+    "test_id": "test_55",
+    "section": "B.2",
+    "description": "Tests that `reveal` on a file path produces a 'No such directory!' error, as it can only operate on directories.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "reveal test/file4.txt",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

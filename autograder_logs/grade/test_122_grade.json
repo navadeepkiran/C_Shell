@@ -1,0 +1,14 @@
+{
+    "test_id": "test_122",
+    "section": "E.4",
+    "description": "Tests that running 'bg' on a non-existent job number produces an error.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "bg 99",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

@@ -1,0 +1,197 @@
+{
+    "testcase": {
+        "section": "B.2",
+        "description": "Tests that reveal lists files in lexicographical (ASCII) order.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "cmd": "mkdir sort_test",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "hop sort_test",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": "~/sort_test"
+            },
+            {
+                "expect_exit": false,
+                "cmd": "touch B a _ 1",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": true,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "reveal -l",
+                "sequential_outputs": [
+                    {
+                        "text": "_",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "1",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "B",
+                        "is_re": false,
+                        "negative_match": false
+                    },
+                    {
+                        "text": "a",
+                        "is_re": false,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "cmd": "reveal",
+                "sequential_outputs": [
+                    {
+                        "text": "^_\\\\s+1\\\\s+B\\\\s+a$",
+                        "is_re": true,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": true
+    },
+    "events": [
+        {
+            "time": "2025-11-19T22:39:30.010814+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-19T22:39:30.011173+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:30.011266+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:30.011358+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='mkdir sort_test', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:30.065233+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:30.065501+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~> "
+        },
+        {
+            "time": "2025-11-19T22:39:30.065603+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='hop sort_test', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after='~/sort_test')"
+        },
+        {
+            "time": "2025-11-19T22:39:30.171632+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:30.171875+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~/sort_test> "
+        },
+        {
+            "time": "2025-11-19T22:39:30.171956+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='touch B a _ 1', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:30.300592+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:30.300879+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~/sort_test> "
+        },
+        {
+            "time": "2025-11-19T22:39:30.301075+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='reveal -l', sequential_outputs=[Line(text='_', is_re=False, negative_match=False), Line(text='1', is_re=False, negative_match=False), Line(text='B', is_re=False, negative_match=False), Line(text='a', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:30.422613+05:30",
+            "type": "output",
+            "details": "1"
+        },
+        {
+            "time": "2025-11-19T22:39:30.422880+05:30",
+            "type": "output",
+            "details": "B"
+        },
+        {
+            "time": "2025-11-19T22:39:30.422953+05:30",
+            "type": "output",
+            "details": "_"
+        },
+        {
+            "time": "2025-11-19T22:39:30.423010+05:30",
+            "type": "output",
+            "details": "a"
+        },
+        {
+            "time": "2025-11-19T22:39:30.423254+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:30.423327+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~/sort_test> "
+        },
+        {
+            "time": "2025-11-19T22:39:30.423416+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, cmd='reveal', sequential_outputs=[Line(text='^_\\\\\\\\s+1\\\\\\\\s+B\\\\\\\\s+a$', is_re=True, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-19T22:39:30.476216+05:30",
+            "type": "output",
+            "details": "1 B _ a"
+        },
+        {
+            "time": "2025-11-19T22:39:30.476779+05:30",
+            "type": "output",
+            "details": "get login failed: No such device or address"
+        },
+        {
+            "time": "2025-11-19T22:39:30.477009+05:30",
+            "type": "output",
+            "details": "<(null)@osntesting:~/sort_test> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\nget login failed: No such device or address\r\n<(null)@osntesting:~> mkdir sort_test\nget login failed: No such device or address\r\n<(null)@osntesting:~> hop sort_test\nget login failed: No such device or address\r\n<(null)@osntesting:~/sort_test> touch B a _ 1\nget login failed: No such device or address\r\n<(null)@osntesting:~/sort_test> reveal -l\n1\r\nB\r\n_\r\na\r\nget login failed: No such device or address\r\n<(null)@osntesting:~/sort_test> reveal\n1 B _ a\r\nget login failed: No such device or address\r\n<(null)@osntesting:~/sort_test> ",
+    "py_log": "2025-11-19 22:39:29,424 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x78f017197b00>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_32f825b0fa2a4cf587dffdb3272fe1c2', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpe9x3wg_n:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 3776861\n    child_fd: 133\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017191fc0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:39:30,010 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.010814+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-19 22:39:30,011 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.011173+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:30,011 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.011266+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:30,011 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.011358+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='mkdir sort_test', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:30,065 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.065233+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:30,065 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.065501+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~> \"\n    }\n2025-11-19 22:39:30,065 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.065603+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='hop sort_test', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after='~/sort_test')\"\n    }\n2025-11-19 22:39:30,171 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.171632+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:30,171 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.171875+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~/sort_test> \"\n    }\n2025-11-19 22:39:30,171 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.171956+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='touch B a _ 1', sequential_outputs=[], nonsequential_outputs=[], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-19 22:39:30,300 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.300592+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:30,300 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.300879+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~/sort_test> \"\n    }\n2025-11-19 22:39:30,301 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.301075+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='reveal -l', sequential_outputs=[Line(text='_', is_re=False, negative_match=False), Line(text='1', is_re=False, negative_match=False), Line(text='B', is_re=False, negative_match=False), Line(text='a', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:39:30,422 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.422613+05:30\",\n        \"type\": \"output\",\n        \"details\": \"1\"\n    }\n2025-11-19 22:39:30,422 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.422880+05:30\",\n        \"type\": \"output\",\n        \"details\": \"B\"\n    }\n2025-11-19 22:39:30,422 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.422953+05:30\",\n        \"type\": \"output\",\n        \"details\": \"_\"\n    }\n2025-11-19 22:39:30,423 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.423010+05:30\",\n        \"type\": \"output\",\n        \"details\": \"a\"\n    }\n2025-11-19 22:39:30,423 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.423254+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:30,423 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.423327+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~/sort_test> \"\n    }\n2025-11-19 22:39:30,423 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.423416+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, cmd='reveal', sequential_outputs=[Line(text='^_\\\\\\\\\\\\\\\\s+1\\\\\\\\\\\\\\\\s+B\\\\\\\\\\\\\\\\s+a$', is_re=True, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-19 22:39:30,476 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.476216+05:30\",\n        \"type\": \"output\",\n        \"details\": \"1 B _ a\"\n    }\n2025-11-19 22:39:30,476 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.476779+05:30\",\n        \"type\": \"output\",\n        \"details\": \"get login failed: No such device or address\"\n    }\n2025-11-19 22:39:30,477 - tester.a8e1da55-994d-408e-b202-91b02396c39d - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-19T22:39:30.477009+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<(null)@osntesting:~/sort_test> \"\n    }\n2025-11-19 22:39:31,309 - tester.a8e1da55-994d-408e-b202-91b02396c39d - WARNING - Failed to remove container tester_32f825b0fa2a4cf587dffdb3272fe1c2: 409 Client Error for http+docker://localhost/v1.51/containers/a9d765224c034ea72bdbbf4f21d0f3b7550781b71c55af4db7ec0ce3b8749e11?v=False&link=False&force=True: Conflict (\"removal of container a9d765224c034ea72bdbbf4f21d0f3b7550781b71c55af4db7ec0ce3b8749e11 is already in progress\")\n2025-11-19 22:39:31,310 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x78f017197b00>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_32f825b0fa2a4cf587dffdb3272fe1c2', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpe9x3wg_n:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<(null)@osntesting:~/sort_test> '\n    match: <re.Match object; span=(0, 32), match='<(null)@osntesting:~/sort_test> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 3776861\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x78f017191fc0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-19 22:39:31,310 - tester.a8e1da55-994d-408e-b202-91b02396c39d - INFO - Cleaned up temp_dir: /tmp/tmpe9x3wg_n\n"
+}

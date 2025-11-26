@@ -1,0 +1,14 @@
+{
+    "test_id": "test_73",
+    "section": "C.2",
+    "description": "Tests that for multiple input redirections, only the last one takes effect.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "cat < test/file4.txt < test/file5.txt",
+        "reason": "Mismatch at sequential line 4",
+        "expected": "This is line 5.",
+        "actual": "This is line 5.get login failed: No such device or address"
+    },
+    "score": 0.0
+}

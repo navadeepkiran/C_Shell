@@ -1,0 +1,14 @@
+{
+    "test_id": "test_92",
+    "section": "C.4",
+    "description": "Tests a long pipeline to ensure multiple pipes are handled correctly.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "echo test | cat | cat | cat | wc -c",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

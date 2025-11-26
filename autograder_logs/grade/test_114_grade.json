@@ -1,0 +1,14 @@
+{
+    "test_id": "test_114",
+    "section": "E.2",
+    "description": "Tests ping command with a PID that does not exist.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "ping 99999 9",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

@@ -1,0 +1,14 @@
+{
+    "test_id": "test_72",
+    "section": "C.2",
+    "description": "Tests input redirection from a non-existent file, expecting an error.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "cat < no_such_file.txt",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

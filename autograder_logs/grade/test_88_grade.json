@@ -1,0 +1,14 @@
+{
+    "test_id": "test_88",
+    "section": "C.4",
+    "description": "Tests a three-command pipeline.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "echo one two three four five | wc -w | cat",
+        "reason": "Insufficient output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}
