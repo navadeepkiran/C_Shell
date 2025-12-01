@@ -1,0 +1,55 @@
+{
+    "testcase": {
+        "section": "C.1",
+        "description": "Tests the execution of a simple, valid command (ls). The shell should not output 'Command not found!'.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "ls",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [
+                    {
+                        "text": "Command not found!",
+                        "is_re": false,
+                        "negative_match": true
+                    }
+                ],
+                "ignore_output": true,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-30T06:38:26.171841+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-30T06:38:26.172282+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T06:38:26.172646+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='ls', sequential_outputs=[], nonsequential_outputs=[Line(text='Command not found!', is_re=False, negative_match=True)], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T06:38:26.313455+05:30",
+            "type": "output",
+            "details": "log.txt  shell.out  test"
+        },
+        {
+            "time": "2025-11-30T06:38:26.313904+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\n<osnuser@osntesting:~> ls\nlog.txt  shell.out  test\r\n<osnuser@osntesting:~> ",
+    "py_log": "2025-11-30 06:38:25,197 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x7984ab8b0500>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_f3b9267f266a4ff19f07eca2fdb5d966', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpeqfbcl3k:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 2023301\n    child_fd: 210\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x798518667580>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 06:38:26,171 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:38:26.171841+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-30 06:38:26,172 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:38:26.172282+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:38:26,172 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:38:26.172646+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='ls', sequential_outputs=[], nonsequential_outputs=[Line(text='Command not found!', is_re=False, negative_match=True)], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-30 06:38:26,313 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:38:26.313455+05:30\",\n        \"type\": \"output\",\n        \"details\": \"log.txt  shell.out  test\"\n    }\n2025-11-30 06:38:26,313 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:38:26.313904+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:38:26,650 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x7984ab8b0500>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_f3b9267f266a4ff19f07eca2fdb5d966', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpeqfbcl3k:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<osnuser@osntesting:~> '\n    match: <re.Match object; span=(0, 23), match='<osnuser@osntesting:~> '>\n    match_index: 0\n    exitstatus: 129\n    flag_eof: False\n    pid: 2023301\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x798518667580>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 06:38:26,650 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Cleaned up temp_dir: /tmp/tmpeqfbcl3k\n"
+}

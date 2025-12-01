@@ -1,0 +1,8 @@
+{
+    "test_id": "test_107",
+    "section": "D.2",
+    "description": "Tests a background command that involves both a pipe and output redirection.",
+    "passed": true,
+    "failure": null,
+    "score": 1.0
+}

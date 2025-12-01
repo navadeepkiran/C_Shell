@@ -1,0 +1,14 @@
+{
+    "test_id": "test_44",
+    "section": "B.1",
+    "description": "Tests sequential 'hop' arguments where one is invalid. The valid hops before and after the invalid one should still execute.",
+    "passed": false,
+    "failure": {
+        "step_index": 0,
+        "command": "hop test/folder1 no_such_dir test/folder2",
+        "reason": "Incorrect number of output lines for sequential check.",
+        "expected": 1,
+        "actual": 2
+    },
+    "score": 0.0
+}

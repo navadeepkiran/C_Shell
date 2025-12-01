@@ -1,0 +1,46 @@
+{
+    "testcase": {
+        "section": "E.3",
+        "description": "Tests that Ctrl+D on an empty line exits the shell. Note: This does not check for the 'logout' message.",
+        "cmds": [
+            {
+                "expect_exit": true,
+                "skip_prompt_check": false,
+                "code": "d",
+                "output": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-30T15:19:19.184296+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-30T15:19:19.184483+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T15:19:19.184591+05:30",
+            "type": "input",
+            "details": "ControlSignal(expect_exit=True, skip_prompt_check=False, code='d', output=None)"
+        },
+        {
+            "time": "2025-11-30T15:19:19.185661+05:30",
+            "type": "output",
+            "details": "logout"
+        },
+        {
+            "time": "2025-11-30T15:19:19.540185+05:30",
+            "type": "eof",
+            "details": "EOF received from child:\n    <pexpect.pty_spawn.spawn object at 0x70b00db00d40>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_37d1a4cdf20a461b8fa40822ac26d044', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp99dfelvu:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: <class 'pexpect.exceptions.EOF'>\n    match: <class 'pexpect.exceptions.EOF'>\n    match_index: 2\n    exitstatus: None\n    flag_eof: True\n    pid: 1896645\n    child_fd: 82\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x70b054557640>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1"
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\n<osnuser@osntesting:~> \u0004logout\r\n",
+    "py_log": "2025-11-30 15:19:18,673 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x70b00db00d40>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_37d1a4cdf20a461b8fa40822ac26d044', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp99dfelvu:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 1896645\n    child_fd: 82\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x70b054557640>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 15:19:19,184 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:19.184296+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-30 15:19:19,184 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:19.184483+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 15:19:19,184 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:19.184591+05:30\",\n        \"type\": \"input\",\n        \"details\": \"ControlSignal(expect_exit=True, skip_prompt_check=False, code='d', output=None)\"\n    }\n2025-11-30 15:19:19,185 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:19.185661+05:30\",\n        \"type\": \"output\",\n        \"details\": \"logout\"\n    }\n2025-11-30 15:19:19,540 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:19.540185+05:30\",\n        \"type\": \"eof\",\n        \"details\": \"EOF received from child:\\n    <pexpect.pty_spawn.spawn object at 0x70b00db00d40>\\n    command: /usr/bin/docker\\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_37d1a4cdf20a461b8fa40822ac26d044', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp99dfelvu:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\\n    buffer (last 100 chars): ''\\n    before (last 100 chars): ''\\n    after: <class 'pexpect.exceptions.EOF'>\\n    match: <class 'pexpect.exceptions.EOF'>\\n    match_index: 2\\n    exitstatus: None\\n    flag_eof: True\\n    pid: 1896645\\n    child_fd: 82\\n    closed: False\\n    timeout: 2.0\\n    delimiter: <class 'pexpect.exceptions.EOF'>\\n    logfile: <tester.FlexibleIO object at 0x70b054557640>\\n    logfile_read: None\\n    logfile_send: None\\n    maxread: 2000\\n    ignorecase: False\\n    searchwindowsize: None\\n    delaybeforesend: 0.05\\n    delayafterclose: 0.1\\n    delayafterterminate: 0.1\"\n    }\n2025-11-30 15:19:19,548 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x70b00db00d40>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_37d1a4cdf20a461b8fa40822ac26d044', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp99dfelvu:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: <class 'pexpect.exceptions.EOF'>\n    match: <class 'pexpect.exceptions.EOF'>\n    match_index: 2\n    exitstatus: 0\n    flag_eof: True\n    pid: 1896645\n    child_fd: 82\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x70b054557640>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 15:19:19,548 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - INFO - Cleaned up temp_dir: /tmp/tmp99dfelvu\n"
+}

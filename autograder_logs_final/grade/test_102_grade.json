@@ -1,0 +1,8 @@
+{
+    "test_id": "test_102",
+    "section": "D.2",
+    "description": "Tests that a background command that fails produces an 'exited abnormally' message.",
+    "passed": true,
+    "failure": null,
+    "score": 1.0
+}

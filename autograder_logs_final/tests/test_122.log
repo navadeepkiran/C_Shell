@@ -1,0 +1,55 @@
+{
+    "testcase": {
+        "section": "E.4",
+        "description": "Tests that running 'bg' on a non-existent job number produces an error.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "bg 99",
+                "sequential_outputs": [
+                    {
+                        "text": "No such job",
+                        "is_re": false,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-30T15:19:23.817850+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-30T15:19:23.818027+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T15:19:23.818204+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='bg 99', sequential_outputs=[Line(text='No such job', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T15:19:23.869565+05:30",
+            "type": "output",
+            "details": "No such job"
+        },
+        {
+            "time": "2025-11-30T15:19:23.869679+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\n<osnuser@osntesting:~> bg 99\nNo such job\r\n<osnuser@osntesting:~> ",
+    "py_log": "2025-11-30 15:19:23,358 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x70b00ce4ec30>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_ef94d845104f416a9434288d5a014482', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp4q2_ncex:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 1911054\n    child_fd: 110\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x70b054314ac0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 15:19:23,817 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:23.817850+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-30 15:19:23,818 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:23.818027+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 15:19:23,818 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:23.818204+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='bg 99', sequential_outputs=[Line(text='No such job', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-30 15:19:23,869 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:23.869565+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such job\"\n    }\n2025-11-30 15:19:23,869 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T15:19:23.869679+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 15:19:24,373 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x70b00ce4ec30>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_ef94d845104f416a9434288d5a014482', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp4q2_ncex:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<osnuser@osntesting:~> '\n    match: <re.Match object; span=(0, 23), match='<osnuser@osntesting:~> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 1911054\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x70b054314ac0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 15:19:24,373 - tester.0797c690-e500-4d7e-9247-d9cd93a25525 - INFO - Cleaned up temp_dir: /tmp/tmp4q2_ncex\n"
+}

@@ -1,0 +1,8 @@
+{
+    "test_id": "test_90",
+    "section": "C.4",
+    "description": "Tests a pipeline where a command in the middle is not found. The pipeline should still execute.",
+    "passed": true,
+    "failure": null,
+    "score": 1.0
+}

@@ -1,0 +1,92 @@
+{
+    "testcase": {
+        "section": "B.2",
+        "description": "Tests reveal on an empty directory, both with and without the -a flag.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "mkdir /app/test/empty_dir",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "reveal empty_dir",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            },
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "reveal -a empty_dir",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": true
+    },
+    "events": [
+        {
+            "time": "2025-11-30T06:37:13.322176+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-30T06:37:13.322393+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T06:37:13.322553+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='mkdir /app/test/empty_dir', sequential_outputs=[], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T06:37:13.426676+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T06:37:13.426872+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='reveal empty_dir', sequential_outputs=[], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T06:37:13.488131+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-30T06:37:13.488246+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T06:37:13.488313+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='reveal -a empty_dir', sequential_outputs=[], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T06:37:13.596514+05:30",
+            "type": "output",
+            "details": "No such directory!"
+        },
+        {
+            "time": "2025-11-30T06:37:13.596820+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\n<osnuser@osntesting:~> mkdir /app/test/empty_dir\n<osnuser@osntesting:~> reveal empty_dir\nNo such directory!\r\n<osnuser@osntesting:~> reveal -a empty_dir\nNo such directory!\r\n<osnuser@osntesting:~> ",
+    "py_log": "2025-11-30 06:37:12,900 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x7984ae289c70>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_b59a68d4faf349c9a7d698c170d4a309', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp2d8neyrr:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 1999369\n    child_fd: 204\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x798518640340>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 06:37:13,322 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.322176+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-30 06:37:13,322 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.322393+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:37:13,322 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.322553+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='mkdir /app/test/empty_dir', sequential_outputs=[], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-30 06:37:13,426 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.426676+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:37:13,426 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.426872+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='reveal empty_dir', sequential_outputs=[], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-30 06:37:13,488 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.488131+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-30 06:37:13,488 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.488246+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:37:13,488 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.488313+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='reveal -a empty_dir', sequential_outputs=[], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-30 06:37:13,596 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.596514+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such directory!\"\n    }\n2025-11-30 06:37:13,596 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:37:13.596820+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:37:14,389 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x7984ae289c70>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_b59a68d4faf349c9a7d698c170d4a309', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmp2d8neyrr:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<osnuser@osntesting:~> '\n    match: <re.Match object; span=(0, 23), match='<osnuser@osntesting:~> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 1999369\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x798518640340>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 06:37:14,389 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Cleaned up temp_dir: /tmp/tmp2d8neyrr\n"
+}

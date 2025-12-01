@@ -1,0 +1,90 @@
+{
+    "testcase": {
+        "section": "A.3",
+        "description": "Tests a complex but valid command involving pipes, redirections, sequential, and background operators.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "a | b ; c > out.txt & d < in.txt | e ; f >> app.txt &",
+                "sequential_outputs": [],
+                "nonsequential_outputs": [
+                    {
+                        "text": "Invalid Syntax!",
+                        "is_re": false,
+                        "negative_match": true
+                    }
+                ],
+                "ignore_output": true,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": false
+    },
+    "events": [
+        {
+            "time": "2025-11-30T06:35:56.667829+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-30T06:35:56.667962+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T06:35:56.668074+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='a | b ; c > out.txt & d < in.txt | e ; f >> app.txt &', sequential_outputs=[], nonsequential_outputs=[Line(text='Invalid Syntax!', is_re=False, negative_match=True)], ignore_output=True, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T06:35:56.757520+05:30",
+            "type": "output",
+            "details": "Command not found!"
+        },
+        {
+            "time": "2025-11-30T06:35:56.757935+05:30",
+            "type": "output",
+            "details": "Command not found!"
+        },
+        {
+            "time": "2025-11-30T06:35:56.758164+05:30",
+            "type": "output",
+            "details": "[1] 30"
+        },
+        {
+            "time": "2025-11-30T06:35:56.758366+05:30",
+            "type": "output",
+            "details": "Command not found!"
+        },
+        {
+            "time": "2025-11-30T06:35:56.758582+05:30",
+            "type": "output",
+            "details": "No such file or directory"
+        },
+        {
+            "time": "2025-11-30T06:35:56.758761+05:30",
+            "type": "output",
+            "details": "Command not found!"
+        },
+        {
+            "time": "2025-11-30T06:35:56.758932+05:30",
+            "type": "output",
+            "details": "[2] 33"
+        },
+        {
+            "time": "2025-11-30T06:35:56.759099+05:30",
+            "type": "output",
+            "details": "c > out.txt with pid 30 exited abnormally"
+        },
+        {
+            "time": "2025-11-30T06:35:56.759282+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\n<osnuser@osntesting:~> a | b ; c > out.txt & d < in.txt | e ; f >> app.txt &\nCommand not found!\r\nCommand not found!\r\n[1] 30\r\nCommand not found!\r\nNo such file or directory\r\nCommand not found!\r\n[2] 33\r\nc > out.txt with pid 30 exited abnormally\r\n<osnuser@osntesting:~> Command not found!\r\n",
+    "py_log": "2025-11-30 06:35:55,742 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x7984acff4ec0>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_f0e1356793b14780ada454daa995b077', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpkm_ec95n:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 1973232\n    child_fd: 201\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x79851bf216c0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 06:35:56,667 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.667829+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-30 06:35:56,667 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.667962+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:35:56,668 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.668074+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='a | b ; c > out.txt & d < in.txt | e ; f >> app.txt &', sequential_outputs=[], nonsequential_outputs=[Line(text='Invalid Syntax!', is_re=False, negative_match=True)], ignore_output=True, cwd_after=None)\"\n    }\n2025-11-30 06:35:56,757 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.757520+05:30\",\n        \"type\": \"output\",\n        \"details\": \"Command not found!\"\n    }\n2025-11-30 06:35:56,758 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.757935+05:30\",\n        \"type\": \"output\",\n        \"details\": \"Command not found!\"\n    }\n2025-11-30 06:35:56,758 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.758164+05:30\",\n        \"type\": \"output\",\n        \"details\": \"[1] 30\"\n    }\n2025-11-30 06:35:56,758 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.758366+05:30\",\n        \"type\": \"output\",\n        \"details\": \"Command not found!\"\n    }\n2025-11-30 06:35:56,758 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.758582+05:30\",\n        \"type\": \"output\",\n        \"details\": \"No such file or directory\"\n    }\n2025-11-30 06:35:56,758 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.758761+05:30\",\n        \"type\": \"output\",\n        \"details\": \"Command not found!\"\n    }\n2025-11-30 06:35:56,758 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.758932+05:30\",\n        \"type\": \"output\",\n        \"details\": \"[2] 33\"\n    }\n2025-11-30 06:35:56,759 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.759099+05:30\",\n        \"type\": \"output\",\n        \"details\": \"c > out.txt with pid 30 exited abnormally\"\n    }\n2025-11-30 06:35:56,759 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T06:35:56.759282+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 06:35:57,230 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x7984acff4ec0>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_f0e1356793b14780ada454daa995b077', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmpkm_ec95n:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): 'Command not found!\\r\\n'\n    before (last 100 chars): ''\n    after: '<osnuser@osntesting:~> '\n    match: <re.Match object; span=(0, 23), match='<osnuser@osntesting:~> '>\n    match_index: 0\n    exitstatus: 129\n    flag_eof: False\n    pid: 1973232\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x79851bf216c0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 06:35:57,230 - tester.281d0e65-cc7e-422f-a5c1-af624b42b740 - INFO - Cleaned up temp_dir: /tmp/tmpkm_ec95n\n"
+}

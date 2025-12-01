@@ -1,0 +1,8 @@
+{
+    "test_id": "test_101",
+    "section": "D.2",
+    "description": "Tests a simple background command, checking for the job ID and the subsequent completion message.",
+    "passed": true,
+    "failure": null,
+    "score": 1.0
+}

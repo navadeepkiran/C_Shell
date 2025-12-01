@@ -1,0 +1,8 @@
+{
+    "test_id": "test_105",
+    "section": "D.2",
+    "description": "Tests running a command with pipes in the background and checks for multiple cleanup messages.",
+    "passed": true,
+    "failure": null,
+    "score": 1.0
+}

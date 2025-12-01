@@ -1,0 +1,8 @@
+{
+    "test_id": "test_94",
+    "section": "C.4",
+    "description": "Tests a pipeline where the first command is invalid, ensuring subsequent commands still run.",
+    "passed": true,
+    "failure": null,
+    "score": 1.0
+}

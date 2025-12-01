@@ -1,0 +1,55 @@
+{
+    "testcase": {
+        "section": "C.2",
+        "description": "Tests that redirecting input from a directory results in an error.",
+        "cmds": [
+            {
+                "expect_exit": false,
+                "skip_prompt_check": false,
+                "cmd": "cat < test/folder1",
+                "sequential_outputs": [
+                    {
+                        "text": "cat: -: Is a directory",
+                        "is_re": false,
+                        "negative_match": false
+                    }
+                ],
+                "nonsequential_outputs": [],
+                "ignore_output": false,
+                "cwd_after": null
+            }
+        ],
+        "timeout": 2.0,
+        "strict_prompt": false,
+        "requires_test_folder": true
+    },
+    "events": [
+        {
+            "time": "2025-11-30T18:45:25.172913+05:30",
+            "type": "output",
+            "details": "# I am currently running bash"
+        },
+        {
+            "time": "2025-11-30T18:45:25.173236+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        },
+        {
+            "time": "2025-11-30T18:45:25.173405+05:30",
+            "type": "input",
+            "details": "GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='cat < test/folder1', sequential_outputs=[Line(text='cat: -: Is a directory', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)"
+        },
+        {
+            "time": "2025-11-30T18:45:25.225590+05:30",
+            "type": "output",
+            "details": "cat: -: Is a directory"
+        },
+        {
+            "time": "2025-11-30T18:45:25.225887+05:30",
+            "type": "output",
+            "details": "<osnuser@osntesting:~> "
+        }
+    ],
+    "raw_log": "##### START RAW OUTPUT #####\n# I am currently running bash\r\n<osnuser@osntesting:~> cat < test/folder1\ncat: -: Is a directory\r\n<osnuser@osntesting:~> ",
+    "py_log": "2025-11-30 18:45:24,452 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - INFO - Spawned child:\n    <pexpect.pty_spawn.spawn object at 0x7508a8089e80>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_aeb0f8ff250346868cd8cc1edd4dd004', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmptxxwt5zv:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: None\n    match: None\n    match_index: None\n    exitstatus: None\n    flag_eof: False\n    pid: 1255109\n    child_fd: 27\n    closed: False\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x7508ac1825c0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 18:45:25,173 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T18:45:25.172913+05:30\",\n        \"type\": \"output\",\n        \"details\": \"# I am currently running bash\"\n    }\n2025-11-30 18:45:25,173 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T18:45:25.173236+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 18:45:25,173 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T18:45:25.173405+05:30\",\n        \"type\": \"input\",\n        \"details\": \"GenericCmd(expect_exit=False, skip_prompt_check=False, cmd='cat < test/folder1', sequential_outputs=[Line(text='cat: -: Is a directory', is_re=False, negative_match=False)], nonsequential_outputs=[], ignore_output=False, cwd_after=None)\"\n    }\n2025-11-30 18:45:25,225 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T18:45:25.225590+05:30\",\n        \"type\": \"output\",\n        \"details\": \"cat: -: Is a directory\"\n    }\n2025-11-30 18:45:25,225 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - DEBUG - Received event:\n    {\n        \"time\": \"2025-11-30T18:45:25.225887+05:30\",\n        \"type\": \"output\",\n        \"details\": \"<osnuser@osntesting:~> \"\n    }\n2025-11-30 18:45:25,758 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - WARNING - Failed to remove container tester_aeb0f8ff250346868cd8cc1edd4dd004: 409 Client Error for http+docker://localhost/v1.51/containers/a465c68cbdcf34b8deb349ae21321d05b5d3bea3a0d0528b60e99f2bb400eee4?v=False&link=False&force=True: Conflict (\"removal of container a465c68cbdcf34b8deb349ae21321d05b5d3bea3a0d0528b60e99f2bb400eee4 is already in progress\")\n2025-11-30 18:45:25,758 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - INFO - Finished running testcase. Child info at exit:\n    <pexpect.pty_spawn.spawn object at 0x7508a8089e80>\n    command: /usr/bin/docker\n    args: [b'/usr/bin/docker', b'run', b'--name', b'tester_aeb0f8ff250346868cd8cc1edd4dd004', b'-i', b'-t', b'--rm', b'--init', b'-h', b'osntesting', b'-v', b'/tmp/tmptxxwt5zv:/app', b'-w', b'/app', b'shell_tester:latest', b'/app/shell.out']\n    buffer (last 100 chars): ''\n    before (last 100 chars): ''\n    after: '<osnuser@osntesting:~> '\n    match: <re.Match object; span=(0, 23), match='<osnuser@osntesting:~> '>\n    match_index: 0\n    exitstatus: None\n    flag_eof: False\n    pid: 1255109\n    child_fd: -1\n    closed: True\n    timeout: 2.0\n    delimiter: <class 'pexpect.exceptions.EOF'>\n    logfile: <tester.FlexibleIO object at 0x7508ac1825c0>\n    logfile_read: None\n    logfile_send: None\n    maxread: 2000\n    ignorecase: False\n    searchwindowsize: None\n    delaybeforesend: 0.05\n    delayafterclose: 0.1\n    delayafterterminate: 0.1\n2025-11-30 18:45:25,759 - tester.ea0cef6f-d561-4b68-b117-2799384039c4 - INFO - Cleaned up temp_dir: /tmp/tmptxxwt5zv\n"
+}
